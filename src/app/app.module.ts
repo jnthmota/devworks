@@ -8,6 +8,7 @@ import { AuthModule } from './core/auth/auth.module';
 import { CompanyModule } from './modules/company/company.module';
 import { CandidateModule } from './modules/candidate/candidate.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
