@@ -1,14 +1,6 @@
 <main>
     <section class="section section-shaped section-lg">
       <div class="shape shape-style-1 bg-gradient-default">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
       <div class="container pt-lg-md">
         <div class="row justify-content-center">
@@ -16,7 +8,7 @@
             <div class="card bg-secondary shadow border-0">
               <div class="card-header bg-white pb-5">
                 <div class="text-muted text-center mb-3">
-                  <small>Sign up with</small>
+                  <small>Entre ou cadastre-se como candidato</small>
                 </div>
                 <div class="text-center">
                   <a href="javascript:void(0)" class="btn btn-neutral btn-icon mr-4">
@@ -35,7 +27,7 @@
               </div>
               <div class="card-body px-lg-5 py-lg-5">
                 <div class="text-center text-muted mb-4">
-                  <small>Or sign up with credentials</small>
+                  <small>Ou Digite seu E-mail e nome</small>
                 </div>
                 <form role="form">
                   <div class="form-group" [ngClass]="{'focused':focus===true}">
@@ -43,7 +35,15 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                       </div>
-                      <input class="form-control" placeholder="Name" type="text" (focus)="focus=true" (blur)="focus=false">
+                      <input class="form-control" placeholder="Nome" type="text" (focus)="focus=true" (blur)="focus=false">
+                    </div>
+                  </div>
+                  <div class="form-group" [ngClass]="{'focused':focus===true}">
+                    <div class="input-group input-group-alternative mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                      </div>
+                      <input class="form-control" placeholder="CPF" type="text" (focus)="focus=true" (blur)="focus=false">
                     </div>
                   </div>
                   <div class="form-group" [ngClass]="{'focused':focus1===true}">
@@ -59,28 +59,23 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                       </div>
-                      <input class="form-control" placeholder="Password" type="password" (focus)="focus2=true" (blur)="focus2=false">
+                      <input class="form-control" placeholder="Senha" type="password" (focus)="focus2=true" (blur)="focus2=false">
                     </div>
-                  </div>
-                  <div class="text-muted font-italic">
-                    <small>password strength:
-                      <span class="text-success font-weight-700">strong</span>
-                    </small>
                   </div>
                   <div class="row my-4">
                     <div class="col-12">
                       <div class="custom-control custom-control-alternative custom-checkbox">
                         <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                         <label class="custom-control-label" for="customCheckRegister">
-                          <span>I agree with the
-                            <a href="javascript:void(0)">Privacy Policy</a>
+                          <span>Ao fazer login, você indica que está de acordo com os
+                            <a href="javascript:void(0)">Termos de Uso</a>
                           </span>
                         </label>
                       </div>
                     </div>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary mt-4">Create account</button>
+                    <button type="button" class="btn btn-primary mt-4">Criar Conta</button>
                   </div>
                 </form>
               </div>

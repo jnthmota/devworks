@@ -1,0 +1,24 @@
+.bg-gradient-default {
+
+  background-image: url("../../../../assets/img/opporJob.jpg")!important;
+  background-repeat: no-repeat !important;
+  background-size: 58% 680px !important;  
+  padding-left: 30% !important;
+  padding-top: 100px !important;
+  width: 100% !important;
+  max-width: 140% !important;
+  height: 900px !important;
+  padding: 10px 0;
+}
+
+.section-shaped .shape + .container {
+    position: relative;
+    height: 380%;
+    left: 400px;
+    padding-top: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    top: -120px;
+    padding: -70px 0;
+    
+}
