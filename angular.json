@@ -28,8 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss", 
-              "src/assets/scss/argon.scss"
+              "src/assets/scss/argon.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },

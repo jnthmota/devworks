@@ -37,21 +37,48 @@
                 <div class="text-center text-muted mb-4">
                   <small>Or sign in with credentials</small>
                 </div>
-                <form role="form">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                   <div class="form-group mb-3" [ngClass]="{'focused':focus===true}">
-                    <div class="input-group input-group-alternative">
+                    <div 
+                      class="input-group input-group-alternativ"
+                      [ngClass]="{ 'is-invalid': submitted && fl.username.errors }"
+                    >
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                       </div>
-                      <input class="form-control" placeholder="Email" type="email" (focus)="focus=true" (blur)="focus=false">
+                      <input 
+                        class="form-control" 
+                        placeholder="Email" 
+                        type="email" 
+                        required (focus)="focus=true" 
+                        (blur)="focus=false"
+                        formControlName="username"
+                        >
+                    </div>
+                    <div *ngIf="submitted && fl.username.errors" class="invalid-feedback d-block">
+                      <div *ngIf="fl.username.errors.required">O Email é obrigatório</div>
+                      <div *ngIf="fl.username.errors.email">O email é inválido</div>
                     </div>
                   </div>
                   <div class="form-group" [ngClass]="{'focused':focus1===true}">
-                    <div class="input-group input-group-alternative">
+                    <div 
+                      class="input-group input-group-alternative" 
+                      [ngClass]="{ 'is-invalid': submitted && fl.password.errors }"
+                    >
                       <div class="input-group-prepend">
                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                       </div>
-                      <input class="form-control" placeholder="Password" type="password" (focus)="focus1=true" (blur)="focus1=false">
+                      <input 
+                        class="form-control" 
+                        placeholder="Password" 
+                        type="password" 
+                        (focus)="focus1=true" 
+                        (blur)="focus1=false"
+                        formControlName="password"
+                      >
+                    </div>
+                    <div *ngIf="submitted && fl.password.errors" class="invalid-feedback d-block">
+                      <div *ngIf="fl.password.errors.required">A senha é obrigatória</div>
                     </div>
                   </div>
                   <div class="custom-control custom-control-alternative custom-checkbox">
@@ -61,7 +88,7 @@
                     </label>
                   </div>
                   <div class="text-center">
-                    <button type="button" class="btn btn-primary my-4">Sign in</button>
+                    <button class="btn btn-primary my-4">Sign in</button>
                   </div>
                 </form>
               </div>

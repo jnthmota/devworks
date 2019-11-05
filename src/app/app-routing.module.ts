@@ -5,12 +5,15 @@ import { LoginComponent } from './core/auth/login/login.component';
 import { HomeComponent } from './core/pages/home/home.component';
 import { RegisterCandidateComponent } from './core/auth/register-candidate/register-candidate.component';
 import { RegisterCompanyComponent } from './core/auth/register-company/register-company.component';
-
+import { 
+  AuthGuardService as AuthGuard 
+} from './core//helpers/auth-guard.service';
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuard] 
   },
   {
     path: "login",
